@@ -1,22 +1,25 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useContext } from "react";
+import AuthContext from "@/AuthContext";
 
 export default function page() {
-  const [inputs, setInputs] = useState({});
+  const [inputs, setInputs] = useState(null);
+  const { login } = useContext(AuthContext);
 
   function handleChange(e) {
     setInputs((values) => ({ ...values, [e.target.name]: e.target.value }));
   }
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("https://dummyjson.com/auth/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(inputs),
-    })
-      .then((res) => res.json())
-      .then(console.log)
-      .catch(console.error(message));
+    login(inputs.username, inputs.password);
+    // fetch("https://dummyjson.com/auth/login", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify(inputs),
+    // })
+    //   .then((res) => res.json())
+    //   .then(console.log)
+    //   .catch(console.error);
   }
 
   return (
