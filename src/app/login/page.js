@@ -3,7 +3,7 @@ import React, { useState, useContext } from "react";
 import AuthContext from "@/AuthContext";
 
 export default function page() {
-  const [inputs, setInputs] = useState(null);
+  const [inputs, setInputs] = useState({});
   const { login } = useContext(AuthContext);
 
   function handleChange(e) {
@@ -12,6 +12,7 @@ export default function page() {
   function handleSubmit(e) {
     e.preventDefault();
     login(inputs.username, inputs.password);
+
     // fetch("https://dummyjson.com/auth/login", {
     //   method: "POST",
     //   headers: { "Content-Type": "application/json" },
@@ -24,6 +25,7 @@ export default function page() {
 
   return (
     <div>
+      <h1>Hello login</h1>
       <section className="bg-gray-50 dark:bg-gray-900">
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
           <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">

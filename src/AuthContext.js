@@ -1,31 +1,48 @@
 // Create a context to manage authentication state. This will help in keeping your authentication logic organized.
 "use client";
-import { createContext, useState } from "react";
+import React, { createContext, useState } from "react";
 
 const AuthContext = createContext();
 //by creating a context any component can access this pages exported variables and methods
 
-export const [user, setUser] = useState(null);
+export function AuthProvider({ children }) {
+  const [user, setUser] = useState(null);
 
-//Login
-export const login = async (username, password) => {
-  try {
-    const response = await fetch("https://dummyjson.com/auth/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ username, password }),
-    });
-    setUser(response.data);
-    console.log(response.data);
-  } catch (error) {
-    console.error("Login failed", error);
-    alert("Invalid credentials");
-  }
-};
+  //Login
+  const login = async (username, password) => {
+    try {
+      const response = await fetch("https://dummyjson.com/user/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, password }),
+      });
 
-//Logout
-export const logout = () => {
-  setUser(null);
-};
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(`${response.status} ${errorData.message}`);
+      }
+
+      const data = await response.json();
+      console.log(data);
+      setUser((olduser) => (olduser = data));
+    } catch (error) {
+      console.error(error);
+      alert(
+        "Invalid Credentials ! Try again with any username & password from https://dummyjson.com/users"
+      );
+    }
+    console.log(user);
+  };
+
+  //Logout
+  const logout = () => {
+    setUser(null);
+  };
+  return (
+    <AuthContext.Provider value={{ user, login, logout }}>
+      {children}
+    </AuthContext.Provider>
+  );
+}
 
 export default AuthContext;
