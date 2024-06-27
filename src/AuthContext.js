@@ -23,15 +23,13 @@ export function AuthProvider({ children }) {
       }
 
       const data = await response.json();
-      console.log(data);
-      setUser((olduser) => (olduser = data));
+      setUser(data);
     } catch (error) {
       console.error(error);
       alert(
         "Invalid Credentials ! Try again with any username & password from https://dummyjson.com/users"
       );
     }
-    console.log(user);
   };
 
   //Logout
