@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
           {/* <Sidebar /> */}
           <Smallbar />
           <div className="w-full">
-            <header className="h-16 border-gray-300 border-[0.1px] shadow-sm">
+            <header className="h-16 border-gray-300 border-b-[0.1px] shadow-sm">
               Header is here
             </header>
             {children}
