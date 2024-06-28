@@ -1,5 +1,5 @@
+"use client";
 import React from "react";
-
 import { MdOutlineAccountBalanceWallet } from "react-icons/md";
 import { MdAccountCircle } from "react-icons/md";
 import { MdSpaceDashboard, MdAddToPhotos } from "react-icons/md";
@@ -21,8 +21,7 @@ export default function Sidebar() {
       </Link>
       <div className="flex items-center gap-2">
         <MdOutlineAccountBalanceWallet className="text-3xl" />
-        <span>Balance :</span>
-        <span className="ml-auto pr-5">10 Rs</span>
+        Balance
       </div>
       <div className="flex items-center gap-2">
         <MdSpaceDashboard className="text-3xl" />

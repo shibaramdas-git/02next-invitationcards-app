@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
       <body className={`${inter.className} flex w-full`}>
         <AuthProvider>
           {/* <Sidebar /> */}
-          <Smallbar />
+          {/* <Smallbar /> */}
           <div className="w-full">
             <header className="h-16 border-gray-300 border-b-[0.1px] shadow-sm">
               Header is here

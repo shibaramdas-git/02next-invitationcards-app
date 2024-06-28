@@ -1,9 +1,30 @@
+import Cardfordashboard from "@/components/Cardfordashboard";
 import React from "react";
 import { IoMdSearch } from "react-icons/io";
 
+const cards = [
+  {
+    id: "1",
+    title: "Card 1 title",
+    content:
+      "Card description , greetings comes here, description , greetings comes heredescription , greetings comes heredescription , greetings comes heredescription",
+    category: "free",
+    date: "28/06/24",
+  },
+  {
+    id: "2",
+    title: "Card 2 title",
+    content:
+      "Card description , greetings comes here, description , greetings comes heredescription , greetings comes heredescription , greetings comes heredescription",
+    category: "",
+    date: "28/06/24",
+  },
+];
+
 export default function page() {
   return (
-    <div>
+    <div className="p-4 md:p-8 max-w-[1440px] mx-auto border border-black">
+      <h1>- Dashboard page -</h1>
       <div className="w-full h-8 border-[0.1px] border-gray-300 my-6 mx-4 rounded-md p-5 bg-cyan-100 flex justify-start items-center">
         <div>
           Filter by
@@ -27,7 +48,26 @@ export default function page() {
         />
         <IoMdSearch className="" />
       </div>
-      Dashboard page
+      <section>
+        <h2>Your cards collection</h2>
+        <div className="sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 my-6">
+          <Cardfordashboard />
+          <Cardfordashboard />
+          <Cardfordashboard />
+          <Cardfordashboard />
+          <Cardfordashboard />
+          <Cardfordashboard />
+          <Cardfordashboard />
+          <Cardfordashboard />
+          <Cardfordashboard />
+          <Cardfordashboard />
+          <Cardfordashboard />
+          <Cardfordashboard />
+          <Cardfordashboard />
+          <Cardfordashboard />
+          <Cardfordashboard />
+        </div>
+      </section>
     </div>
   );
 }
