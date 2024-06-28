@@ -1,3 +1,4 @@
+"use client";
 import Cardfordashboard from "@/components/Cardfordashboard";
 import React from "react";
 import { IoMdSearch } from "react-icons/io";
@@ -16,12 +17,75 @@ const cards = [
     title: "Card 2 title",
     content:
       "Card description , greetings comes here, description , greetings comes heredescription , greetings comes heredescription , greetings comes heredescription",
-    category: "",
-    date: "28/06/24",
+    category: "colorful",
+    bgcolor: "gray",
+    date: "20/06/24",
+  },
+  {
+    id: "3",
+    title: "Card 3 title",
+    content:
+      "Card description , greetings comes here, description , greetings comes heredescription , greetings comes heredescription , greetings comes heredescription",
+    category: "free",
+    date: "20/06/24",
+  },
+  {
+    id: "4",
+    title: "Card 4 title",
+    content:
+      "Card description , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , greetings comes heredescription , greetings comes heredescription , greetings comes heredescription",
+    category: "free",
+    date: "20/06/24",
+  },
+  {
+    id: "5",
+    title: "Card 5 title",
+    content:
+      "Card description , greetings comes here, description cription , greetings comes heredescription",
+    category: "colorful",
+    bgcolor: "#",
+    date: "20/06/24",
+  },
+  {
+    id: "6",
+    title: "Card 6 title",
+    content:
+      "Card description , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , greetings comes heredescription , greetings comes heredescription , greetings comes heredescription",
+    category: "birthday-template",
+    bgimage: "birthday-temp1",
+    date: "20/06/24",
+  },
+  {
+    id: "7",
+    title: "Card 7 title",
+    content:
+      "Card description , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , greetings comes heredescription , greetings comes heredescription , greetings comes heredescription",
+    category: "greetings-template",
+    bgimage: "greeting-temp1",
+    date: "21/06/24",
+  },
+  {
+    id: "8",
+    title: "Card 8 title",
+    content:
+      "Card description , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , greetings comes heredescription , greetings comes heredescription , greetings comes heredescription",
+    category: "wedding-template",
+    bgimage: "wedding-temp1",
+    date: "15/06/24",
+  },
+  {
+    id: "9",
+    title: "Card 9 title",
+    content:
+      "Card description , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , greetings comes heredescription , greetings comes heredescription , greetings comes heredescription",
+    category: "colorful",
+    bgcolor: "#123456",
+    date: "18/06/24",
   },
 ];
 
 export default function page() {
+  console.log(cards);
   return (
     <div className="p-4 md:p-8 max-w-[1440px] mx-auto border border-black">
       <h1>- Dashboard page -</h1>
@@ -51,21 +115,7 @@ export default function page() {
       <section>
         <h2>Your cards collection</h2>
         <div className="sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 my-6">
-          <Cardfordashboard />
-          <Cardfordashboard />
-          <Cardfordashboard />
-          <Cardfordashboard />
-          <Cardfordashboard />
-          <Cardfordashboard />
-          <Cardfordashboard />
-          <Cardfordashboard />
-          <Cardfordashboard />
-          <Cardfordashboard />
-          <Cardfordashboard />
-          <Cardfordashboard />
-          <Cardfordashboard />
-          <Cardfordashboard />
-          <Cardfordashboard />
+          <Cardfordashboard create={true} />
         </div>
       </section>
     </div>
