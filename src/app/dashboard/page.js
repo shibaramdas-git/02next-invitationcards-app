@@ -171,9 +171,19 @@ export default function page() {
         <h2>Your cards collection</h2>
         <div className="sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 my-6">
           {cards.map((card) => (
-            <Cardfordashboard key={card.id} cardData={card} />
+            <Cardfordashboard
+              key={card.id}
+              title={card.data}
+              content={card.content}
+              date={card.data}
+              bgcolor={card.bgcolor}
+              bgimage={card.bgimage}
+              id={card.id}
+              category={card.category}
+              height="h-[500px] sm:h-[525px]"
+            />
           ))}
-          <Cardfordashboard create={true} />
+          <Cardfordashboard create={true} height="h-[500px] sm:h-[525px]" />
         </div>
       </section>
     </div>
