@@ -1,4 +1,5 @@
 "use client";
+
 import Cardfordashboard from "@/components/Cardfordashboard";
 import React from "react";
 import { IoMdSearch } from "react-icons/io";
@@ -26,7 +27,8 @@ const cards = [
     title: "Card 3 title",
     content:
       "Card description , greetings comes here, description , greetings comes heredescription , greetings comes heredescription , greetings comes heredescription",
-    category: "free",
+    category: "colorful",
+    bgcolor: "red",
     date: "20/06/24",
   },
   {
@@ -34,7 +36,8 @@ const cards = [
     title: "Card 4 title",
     content:
       "Card description , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , greetings comes heredescription , greetings comes heredescription , greetings comes heredescription",
-    category: "free",
+    category: "colorful",
+    bgcolor: "green",
     date: "20/06/24",
   },
   {
@@ -43,7 +46,7 @@ const cards = [
     content:
       "Card description , greetings comes here, description cription , greetings comes heredescription",
     category: "colorful",
-    bgcolor: "#",
+    bgcolor: "yellow",
     date: "20/06/24",
   },
   {
@@ -52,7 +55,7 @@ const cards = [
     content:
       "Card description , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , greetings comes heredescription , greetings comes heredescription , greetings comes heredescription",
     category: "birthday-template",
-    bgimage: "birthday-temp1",
+    bgimage: "birthday_temp1",
     date: "20/06/24",
   },
   {
@@ -61,7 +64,7 @@ const cards = [
     content:
       "Card description , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , greetings comes heredescription , greetings comes heredescription , greetings comes heredescription",
     category: "greetings-template",
-    bgimage: "greeting-temp1",
+    bgimage: "greeting_temp1",
     date: "21/06/24",
   },
   {
@@ -70,7 +73,7 @@ const cards = [
     content:
       "Card description , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , greetings comes heredescription , greetings comes heredescription , greetings comes heredescription",
     category: "wedding-template",
-    bgimage: "wedding-temp1",
+    bgimage: "wedding_temp1",
     date: "15/06/24",
   },
   {
@@ -79,13 +82,65 @@ const cards = [
     content:
       "Card description , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , greetings comes heredescription , greetings comes heredescription , greetings comes heredescription",
     category: "colorful",
-    bgcolor: "#123456",
+    bgcolor: "blue",
     date: "18/06/24",
   },
+  {
+    id: "8",
+    title: "Card 8 title",
+    content:
+      "Card description , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , greetings comes heredescription , greetings comes heredescription , greetings comes heredescription",
+    category: "wedding-template",
+    bgimage: "wedding_temp2",
+    date: "15/06/24",
+  },
+  {
+    id: "8",
+    title: "Card 8 title",
+    content:
+      "Card description , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , greetings comes heredescription , greetings comes heredescription , greetings comes heredescription",
+    category: "wedding-template",
+    bgimage: "wedding_temp3",
+    date: "15/06/24",
+  },
+  {
+    id: "8",
+    title: "Card 8 title",
+    content:
+      "Card description , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , greetings comes heredescription , greetings comes heredescription , greetings comes heredescription",
+    category: "wedding-template",
+    bgimage: "greeting_temp2",
+    date: "15/06/24",
+  },
+  {
+    id: "8",
+    title: "Card 8 title",
+    content:
+      "Card description , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , greetings comes heredescription , greetings comes heredescription , greetings comes heredescription",
+    category: "wedding-template",
+    bgimage: "greeting_temp3",
+    date: "15/06/24",
+  },
+  {
+    id: "8",
+    title: "Card 8 title",
+    content:
+      "Card description , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , greetings comes heredescription , greetings comes heredescription , greetings comes heredescription",
+    category: "wedding-template",
+    bgimage: "birthday_temp2",
+    date: "15/06/24",
+  },
+  {
+    id: "8",
+    title: "Card 8 title",
+    content:
+      "Card description , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , , greetings comes here, description , greetings comes heredescription , greetings comes heredescription , greetings comes heredescription",
+    category: "wedding-template",
+    bgimage: "birthday_temp3",
+    date: "15/06/24",
+  },
 ];
-
 export default function page() {
-  console.log(cards);
   return (
     <div className="p-4 md:p-8 max-w-[1440px] mx-auto border border-black">
       <h1>- Dashboard page -</h1>
@@ -114,7 +169,10 @@ export default function page() {
       </div>
       <section>
         <h2>Your cards collection</h2>
-        <div className="sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 my-6">
+        <div className="sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 my-6">
+          {cards.map((card) => (
+            <Cardfordashboard key={card.id} cardData={card} />
+          ))}
           <Cardfordashboard create={true} />
         </div>
       </section>
