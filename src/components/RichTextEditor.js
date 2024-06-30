@@ -44,7 +44,7 @@ export default function RichTextEditor({ setContent, content }) {
   }
 
   return (
-    <div className="rounded-lg">
+    <div className="my-6">
       <ReactQuill
         value={content}
         onChange={handleContentChange}
