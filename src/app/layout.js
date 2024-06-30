@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "react-quill/dist/quill.snow.css";
 import { AuthProvider } from "@/AuthContext";
 import Sidebar from "@/components/Sidebar";
 import Smallbar from "@/components/Smallbar";
